@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="main"  class="sub" onclick="checkBox(this)" value="check11"/><label>1</label><br/>
+    <input type="checkbox" id="main1" class="sub sub1" value="check12"/><label>2</label><br/>
+    <input type="checkbox" id="main2" class="sub sub1" value="check23"/><label>3</label><br/>
+    <input type="checkbox" id="main3" class="sub sub1" value="check34"/><label>4</label><br/>
+    <input type="checkbox" id="main4" class="sub sub1" value="check45"/><label>5</label><br/>
+    <input type="text" name="t1" id="t1"/>
+</body>
+<script>
+    let boxes=document.getElementsByClassName('sub');
+
+    function checkBox(e) {
+            for(i=0;i<boxes.length;i++){
+                boxes[i].checked=e.checked;  
+                if(boxes[2].checked===true){
+                    t1.value=document.getElementById("main").value;
+                } 
+            }
+            
+    }
+</script>
+</html>

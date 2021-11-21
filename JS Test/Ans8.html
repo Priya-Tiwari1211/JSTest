@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image{
+            border: 1px solid red;
+            border-radius: 50%;
+            transition: all 2s;
+        }
+    
+    </style>
+</head>
+<body >
+    <img src="a.jpg" id="image" class="image" height="50" width="50"/ >
+    <img src="a.jpg" id="image" class="image" height="50" width="50"/ >
+    <img src="a.jpg" id="image" class="image" height="50" width="50"/ >
+    <img src="a.jpg" id="image" class="image" height="50" width="50"/ >
+</body>
+<script>
+    
+    window.onload=function rotate(){
+        var image=document.querySelectorAll('.image');
+        for(i=0;i<image.length;i++){
+            image[i].style.transform='rotateZ(360deg)';
+        }
+        setInterval(rotate(),2000)
+    }
+    
+</script>
+</html>

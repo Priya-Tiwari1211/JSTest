@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+
+<body onload="winSizeData()" onresize="winSizeData()">
+    <div id="windata">
+    </div>
+</body>
+<script>
+function winSizeData(){
+	var w = document.documentElement.clientWidth;
+	var h = document.documentElement.clientHeight;
+
+	document.getElementById('windata').innerHTML = "<h5>Width: " + w + "  Height: " + h + "</h5>";
+}
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id ="str" name="str"/>
+    <input type="text" id ="fnd" name="fnd" onkeyup="counter()"/>
+    <!-- <button onclick="counter()">Count</button> -->
+    <div id="store"></div>
+    <script>
+        var store=document.getElementById("store").value;
+
+        var c1 = 0;
+        
+        function counter() 
+        {
+            var str=document.getElementById("str").value;
+        var fnd=document.getElementById("fnd").value;
+        
+        for (var i = 0; i < str.length; i++) 
+        {
+            if (str.charAt(i) == fnd) 
+            {
+            c1 ++;
+            }
+        }
+        // store.innerHTML= c1;
+        document.write(c1);
+        }
+        
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let res=document.getElementById("res")
+        function mult(e) {
+            
+            t3.value=t1.value*t2.value;
+        }
+        function div(e) {
+            
+            t3.value=t1.value/t2.value;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="t1" name="t1"/>
+    <input type="number" id="t2" name="t2"/>
+    <input type="number" id="t3" name="t3"/>
+    <button onclick="mult(this)">*</button>
+    <button onclick="div(this)">/</button>
+</body>
+</html>

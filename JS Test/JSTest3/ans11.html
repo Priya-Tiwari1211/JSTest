@@ -1,0 +1,228 @@
+Ans 1:
+	<script>
+    let date=new Date();
+    
+    var dms=date.toLocaleTimeString('en-US');
+    if(date.getDay()==1){
+        document.write("Monday :",dms);
+    }else if(date.getDay()==2){
+        document.write("Tuesday :",dms);
+    }else
+        if(date.getDay()==3){
+        document.write("wednesday :",dms);
+    }
+    else if(date.getDay()==4){
+        document.write("thursday :",dms);
+    }
+    else
+        if(date.getDay()==5){
+        document.write("friday:",dms);
+    }
+    else
+        if(date.getDay()==6){
+        document.write("saturday :",dms);
+    }
+    else
+        
+        document.write("sunday  :",dms);
+
+</script>
+
+Ans 2:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="txtDate" onblur = "datechk()" /><br/>
+<span class="error" id="err"></span>
+<br />
+<br />
+<input type="button" id="btnValidate" value="Validate" onclick="return datechk()" />
+</body>
+<script>
+    function datechk() {
+        var err = document.getElementById("err");
+        var dateStr = document.getElementById("txtDate").value;
+        var regex = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+        if (regex.test(dateStr)) {
+            var parts = dateStr.split("/");
+            var dtDOB = new Date(parts[1] + "/" + parts[0] + "/" + parts[2]);
+            
+            err.innerHTML = "Valid";
+        } else {
+            err.innerHTML = "Enter date in dd/MM/yyyy format ONLY and Enter a valid date ."
+        }
+    }
+</script>
+</html>
+Ans 3:<script>
+    // let str="The quick brown fox";
+    function vowel(str){
+        let ct=0;
+        let str1=str.split('');
+        for(i=0;i<str1.length;i++){
+            if(str1[i]=='A'|| str1[i]=='a'||str1[i]=='E'||str1[i]=='e'||str1[i]=='I'||str1[i]=='i'||str1[i]=='O'||str1[i]=='o'||str1[i]=='U'||str1[i]=='u'){
+                ct++;
+            }
+        }
+        return ct;
+    }
+    document.write(vowel(prompt("Enter String",'')));
+</script>
+Ans 4:
+<script>
+    let str="thequickbrownfoxjumpsoverthelazydog";
+    function repeat(string) {
+    return string
+    .split('')
+    .filter(function(item, pos, self) {
+    return self.indexOf(item) == pos;
+    })
+    .join('');
+}
+    document.write(repeat(str));
+</script>
+Ans 5:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer">
+        <div id="inner"></div>
+    </div>
+</body>
+<script>
+    window.addEventListener('load',function(){
+
+        outer.style.width=150+"px";
+        outer.style.height=150+"px";
+        outer.style.background="rgba(255,0,0,0.3)";
+        inner.style.width=150+"px";
+        inner.style.height=150+"px";
+        inner.style.background="rgba(0,0,255,0.4)";
+        inner.style.position="absolute";
+        inner.style.top=75+"px";
+        inner.style.left=75+"px";
+    })
+</script>
+</html>
+
+Ans 6:
+<script>
+    var arr1 = [-3,8, 7, 6, 5, -4, 3, 2, 1 ]; 
+document.write(arr1.sort(function(a, b){return a - b}));
+</script>
+Ans 7: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        #store{
+            width:180px;
+            height:100px;
+            border: 1px solid red;
+        }
+
+</style></head>
+<body>
+    <input type="text" id="t1" oninput="storage()"/>
+    <div id="store"></div>
+</body>
+<script>
+    var store=document.getElementById("store");
+    function storage() {
+        store.innerHTML=t1.value;
+
+    }
+</script>
+</html>
+Ans 8:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="genrate()">Genrate</button>
+    <div id="data"></div>
+</body>
+<script>
+    function genrate() {
+        let data=document.getElementById("data");
+        
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        
+        var val=characters.charAt(Math.floor(Math.random()*100));
+        data.innerText=val;
+    }
+</script>
+</html>
+Ans 9:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #t1{
+            position: relative;
+            top:10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <i id="t1">www.ucertify.com</i>
+</body>
+<script>
+    let text=document.querySelector("#t1");
+    window.addEventListener("mousemove",(event)=>{
+        text.style.top=event.clientY+"px";
+        text.style.left=event.clientX+"px";
+    })
+</script>
+</html>
+Ans 10:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let res=document.getElementById("res")
+        function mult(e) {
+            
+            t3.value=t1.value*t2.value;
+        }
+        function div(e) {
+            
+            t3.value=t1.value/t2.value;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" id="t1" name="t1"/>
+    <input type="number" id="t2" name="t2"/>
+    <input type="number" id="t3" name="t3"/>
+    <button onclick="mult(this)">*</button>
+    <button onclick="div(this)">/</button>
+</body>
+</html>

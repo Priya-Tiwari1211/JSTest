@@ -1,0 +1,34 @@
+<script>
+    function check(arr1,arr2) {
+  
+  var fst= allmer(arr1,true);
+  var s1= allmer(arr2,true);
+  
+ var a=[], chk=[];
+  for(var i=0;i< fst.length;i++)
+    a[fst[i]]=false;
+  for(i=0;i< s1.length;i++)
+  if(a[s1[i]]===true) 
+     { delete a[s1[i]];}
+    else a[s1[i]]=true;
+  for(var k in a)
+    chk.push(k);
+  return chk;   
+  }
+
+var allmer = function(a, myarr,st){
+  if(!st){ st = [];}
+if (myarr) {
+  return st.concat.apply(st,a);
+  }  
+   for(i=0; i< a.length; i++){
+        if(a[i].constructor == Array){
+            allmer(a[i],myarr,st);
+        }else{
+            st.push(a[i]);
+        }
+    }
+    return st;
+};
+document.write(check([1, 2, 3], [100, 2, 1, 10]));
+</script>

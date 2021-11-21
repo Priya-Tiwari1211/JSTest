@@ -1,0 +1,36 @@
+<script>
+    let str=" I Am Learning Javascript ";
+    let words=str.trim().split(" ");
+    let count=0;
+  //For 1
+for(i=0; i<words.length;i++){
+        if(words[i]!=' '){
+            count++;
+        }
+    }
+    document.write("Total Words in String : ", count,"<br/>");
+    // for 2 a
+    document.write("["+str+"]","<br/>");
+    document.write("["+str.trim()+"]");
+    // for 2 b
+    let newstr='';
+    for(j=0;j<str.length;j++){
+        if(str[j]===' '){
+            newstr+= "&nbsp;&nbsp;&nbsp; &nbsp;";
+        }else{
+            newstr+=str[j];
+        }
+    }
+    document.write(newstr);
+
+    // FOR 2 C
+    let newstr1='';
+    for(j=0;j<str.length;j++){
+        if(str[j]===' '){
+            newstr1+= "<br/>";
+        }else{
+            newstr1+=str[j];
+        }
+    }
+    document.write(newstr1);
+</script>

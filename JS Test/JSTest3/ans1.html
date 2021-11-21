@@ -1,0 +1,54 @@
+<script>
+    let date=new Date();
+    
+    var dms=date.toLocaleTimeString('en-US');
+    if(date.getDay()==1){
+        document.write("Monday :",dms);
+    }else if(date.getDay()==2){
+        document.write("Tuesday :",dms);
+    }else
+        if(date.getDay()==3){
+        document.write("wednesday :",dms);
+    }
+    else if(date.getDay()==4){
+        document.write("thursday :",dms);
+    }
+    else
+        if(date.getDay()==5){
+        document.write("friday:",dms);
+    }
+    else
+        if(date.getDay()==6){
+        document.write("saturday :",dms);
+    }
+    else
+        
+        document.write("sunday  :",dms);
+
+</script>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Window Size : height and width</title>
+</head>
+<!-- Resize the window (here output panel) and see the result !-->
+<body onload="getSize()" onresize="getSize()">
+<div id="wh"> 
+<!-- Place height and width size here! --> 
+</div>
+<body>
+</body>
+</html>
+
+
+function getSize()
+{
+var w = document.documentElement.clientWidth;
+var h = document.documentElement.clientHeight;
+        
+// put the result into a h1 tag
+ document.getElementById('wh').innerHTML = "<h1>Width: " + w + " â€¢ Height: " + h + "</h1>";
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr id="r1"><td id="col1">A1</td><td id="col2">A2</td></tr>
+        <tr id="r2"><td id="col3">A1</td><td id="col4">A2</td></tr>
+    </table>
+    <button onclick="change()">Change</button>
+</body>
+<script>
+    function change() {
+        let row=parseInt(prompt("enter row no.",''));
+        let col=parseInt(prompt("enter column no.",''));
+        let data=prompt("enter data",'');
+        if(row==1){
+            if(col==1){
+                document.getElementById("col1").value=data;
+            }
+        }
+    }
+</script>
+</html>

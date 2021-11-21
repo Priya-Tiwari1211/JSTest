@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" id="checkbox" name="checkbox" /> <label for="checkbox">Check</label>
+</body>
+<script>
+    let checkbox=document.querySelector("#checkbox");
+    document.addEventListener('change',()=>{
+        if(checkbox){
+            alert("checked");
+        }else{
+            alert("not checked");
+        }
+    })
+
+</script>
+</html>

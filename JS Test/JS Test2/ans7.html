@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post" onsubmit="checkForm()">
+        <input type="text" id="t1" name="t1"/>User ID<br/>
+        <input type="text" id="t2" name="t2"/>User Name<br/>
+        <input type="email" id="t3" name="t3"/>User Email<br/>
+        <input type="text" id="t4" name="t4"/>Pasword<br/>
+        <input type="submit" value="submit"/>
+    </form>
+</body>
+<script>
+    function checkForm() {
+        if(t1.value=='' || t2.value==''||t3.value==''||t4.value==''){
+            alert("Fill form Properly");
+        }
+    }
+</script>
+</html>
